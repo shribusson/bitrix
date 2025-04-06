@@ -1,0 +1,3 @@
+<?
+$MESS['LOCAL_TEMPLATE_STAFF_TITLE'] = '#NAME#';
+$MESS['LOCAL_TEMPLATE_STAFF_BUTTON_ADD'] = 'Добавить сотрудника';

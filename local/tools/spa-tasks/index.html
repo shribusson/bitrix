@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Все задачи Bitrix24 (SPA)</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.bitrix24.ru/bitrix/js/rest/client/rest.bundle.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h2>Полный список задач Bitrix24 (SPA)</h2>
+  <p v-if="loading">Загрузка...</p>
+  <table v-if="tasks.length">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Название</th>
+      <th>Ответственный</th>
+      <th>Постановщик</th>
+      <th>Статус</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="task in tasks" :key="task.ID">
+      <td>{{ task.ID }}</td>
+      <td>{{ task.TITLE }}</td>
+      <td>{{ task.RESPONSIBLE_ID }}</td>
+      <td>{{ task.CREATED_BY }}</td>
+      <td>{{ task.STATUS }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <p v-else-if="!loading">Нет данных</p>
+</div>
+
+<script>
+  BX24.init(function () {
+    new Vue({
+      el: '#app',
+      data: {
+        tasks: [],
+        loading: true
+      },
+      mounted() {
+        this.fetchTasks();
+      },
+      methods: {
+        fetchTasks(start = 0, acc = []) {
+          BX24.callMethod('tasks.task.list', {
+            filter: {},
+            select: ['ID', 'TITLE', 'RESPONSIBLE_ID', 'CREATED_BY', 'STATUS'],
+            start
+          }, (res) => {
+            if (res.error()) {
+              console.error(res.error());
+              this.loading = false;
+              return;
+            }
+            acc.push(...res.answer.result.tasks.map(t => t.task));
+            if (res.answer.next) {
+              this.fetchTasks(res.answer.next, acc);
+            } else {
+              this.tasks = acc;
+              this.loading = false;
+            }
+          });
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
+

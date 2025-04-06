@@ -1,0 +1,28 @@
+.page-header {
+	background: #eef2f4;
+}
+.ui-toolbar {
+	min-height: 73px;
+	max-height: 86px;
+	margin-left: 12px;
+	margin-right: 12px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.ui-toolbar-right-buttons {
+	display: flex;
+	align-items: center;
+}
+a {
+	color: #2067b0;
+	text-decoration: none;
+	-webkit-transition: border-bottom-color .2s linear;
+	transition: border-bottom-color .2s linear;
+}
+
+.popup-window.popup-window-with-titlebar {
+	top: 150px!important;
+}

@@ -1,0 +1,11 @@
+.settings_row {
+    padding: 15px 0;
+}
+.settings_field-tags {
+    display: flex;
+    min-width: 200px;
+}
+
+.popup-window.popup-window-with-titlebar {
+    top: 150px!important;
+}

@@ -1,0 +1,47 @@
+.page-header {
+    background: #eef2f4;
+}
+.ui-toolbar {
+    min-height: 73px;
+    max-height: 86px;
+    margin-left: 12px;
+    margin-right: 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.ui-toolbar-right-buttons {
+    display: flex;
+    align-items: center;
+}
+.postlist_userblock {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.postlist_userblock__inline {
+    display: inline-block;
+    margin: 2px;
+}
+.postlist_userblock-photo {
+    min-width: 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #7b8691;
+    background-size: contain;
+}
+.postlist_userblock-name {
+    margin-left: 10px;
+}
+a {
+    color: #2067b0;
+    text-decoration: none;
+    -webkit-transition: border-bottom-color .2s linear;
+    transition: border-bottom-color .2s linear;
+}
+.popup-window.popup-window-with-titlebar {
+    top: 150px!important;
+}

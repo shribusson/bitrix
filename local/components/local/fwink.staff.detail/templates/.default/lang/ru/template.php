@@ -1,0 +1,32 @@
+<?
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_TAB_ALL'] = 'Общие';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_TAB_TICKET'] = 'Вкладка 2';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_TAB_HISTORY'] = 'Вкладка 3';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_BUTTON_SAVE'] = 'Сохранить';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_BUTTON_CANCEL'] = 'Отменить';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_BUTTON_DELETE'] = 'Удалить';
+
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_ERROR'] = 'Ошибка';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_DELETE_TITLE'] = 'Удалить контакт';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_DELETE_TEXT'] = 'Вы уверены, что хотите удалить контакт?';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_DELETE_BUTTON_SEND'] = 'Удалить';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_DELETE_BUTTON_CANCEL'] = 'Отменить';
+
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_PASSWORD_TITLE'] = 'Изменить пароль';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_PASSWORD_BUTTON_SEND'] = 'Продолжить';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_PASSWORD_BUTTON_CANCEL'] = 'Отменить';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_JS_PASSWORD_SUCCESS'] = 'Пароль успешно изменен';
+
+
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_BUTTON_CHANGE_PASSWORD'] = 'Изменить пароль';
+$MESS['LOCAL_TEMPLATE_STAFF_DETAIL_DROPZONE'] = '
+<div class=\'jFiler-input-dragDrop m-t-10\'>
+    <div class=\'jFiler-input-inner\'>
+        <a class=\'jFiler-input-choose-btn btn btn-primary waves-effect waves-light\'>Загрузить</a>
+    </div>
+</div>';
+$MESS['LOCAL_TEMPLATE_STAFF_PASSWORD_MODAL_LABEL_1'] = 'Пароль <span style=\'color: red;\'> *</span>';
+$MESS['LOCAL_TEMPLATE_STAFF_PASSWORD_MODAL_LABEL_2'] = 'Подтверждение пароля <span style=\'color: red;\'> *</span>';
+
+$MESS['LOCAL_TEMPLATE_STAFF_PASSWORD_MODAL_BUTTON_CANCEL'] = 'Отменить';
+$MESS['LOCAL_TEMPLATE_STAFF_PASSWORD_MODAL_BUTTON_SEND'] = 'Сохранить';
